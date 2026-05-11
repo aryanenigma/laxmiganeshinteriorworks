@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laxmi Ganesh Interior Works</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand-container">
+          <img src="uploads/1000304658.jpg" alt="Laxmi Ganesh Logo" class="header-logo" />
+          <a class="brand" href="#home">Laxmi Ganesh Interior Works</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero section-light">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Premium Interior Styling</p>
+            <h1>Elegant Interiors with a Soft White & Yellow Glow</h1>
+            <p>
+              Transform your living spaces with modular kitchen solutions, WPC louvers, and PVC panel accents designed for modern luxury.
+            </p>
+            <a class="button button-primary" href="#services">Explore Services</a>
+          </div>
+          <div class="hero-image">
+            <img src="uploads/65b4c15b0c432f4088368933.jpg" alt="Premium interior design" class="image-card" />
+          </div>
+        </div>
+      </section>
+
+      
+
+      <section id="services" class="section-soft">
+        <div class="container section-header">
+          <p class="eyebrow">Our specialties</p>
+          <h2>Stylish solutions for every room</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">MK</div>
+            <h3>Modular Kitchen</h3>
+            <p>
+              Seamless layouts, premium finishes, and smart storage solutions for kitchens that feel spacious and luxurious.
+            </p>
+            <img src="uploads/converted (3).jpg" alt="Modular kitchen" class="image-card small" />
+          </article>
+          <article class="service-card">
+            <div class="service-icon">WL</div>
+            <h3>WPC Louvers</h3>
+            <p>
+              Durable, elegant louvers with a warm natural look that brings texture and light control to your home.
+            </p>
+            <img src="uploads/converted (8).jpg" alt="WPC louvers" class="image-card small" />
+          </article>
+          <article class="service-card">
+            <div class="service-icon">PP</div>
+            <h3>PVC Panels</h3>
+            <p>
+              Lightweight, stylish PVC paneling for walls and ceilings that adds refined detail and effortless maintenance.
+            </p>
+            <img src="uploads/converted (9).jpg" alt="PVC panels" class="image-card small" />
+          </article>
+        </div>
+      </section>
+
+      <section id="gallery" class="section-light gallery-section">
+        <div class="container section-header">
+          <p class="eyebrow">Gallery preview</p>
+          <h2>Imagine your space</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-card">
+            <img src="uploads/living room interir white.jpg" alt="Modern kitchen" class="image-card" />
+            <h4>Living room</h4>
+          </div>
+          <div class="gallery-card">
+            <img src="uploads/living area interior full 2).jpg" alt="Stylish louvers" class="image-card" />
+            <h4>Stylish Louvers</h4>
+          </div>
+          <div class="gallery-card">
+            <img src="uploads/converted.jpg" alt="Premium panels" class="image-card" />
+            <h4>Premium Panels</h4>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-soft contact-section">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow">Get in touch</p>
+            <h2>Start your interior project today</h2>
+            <p>
+              Share your images and vision, and we’ll align your interiors to feel premium, bright, and inviting.
+            </p>
+            <p>Contact us at: <strong>8586001783</strong></p>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <label>
+              Name
+              <input type="text" placeholder="Your name" />
+            </label>
+            <label>
+              Message
+              <textarea rows="4" placeholder="Tell us about your space"></textarea>
+            </label>
+            <button type="submit" class="button button-secondary">Send request</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Interior Harmony © 2026</p>
+        <p>Designed for premium white and soft yellow interiors</p>
+      </div>
+    </footer>
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.querySelector('input[placeholder="Your name"]').value;
+        const message = document.querySelector('textarea').value;
+        const whatsappMessage = `HI I WANT TO KNOW MORE ABOUT QUALITY OF PANELS AND DESIGNS. Name: ${name}, Message: ${message}`;
+        const whatsappUrl = `https://wa.me/8586001783?text=${encodeURIComponent(whatsappMessage)}`;
+        window.open(whatsappUrl, '_blank');
+      });
+
+      // Mobile menu toggle
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      const nav = document.querySelector('.nav-links');
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>
